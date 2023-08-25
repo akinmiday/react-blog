@@ -49,8 +49,6 @@ function App() {
   const [postBody, setPostBody] = useState('')
 
 
-
-
   useEffect(() => {
     const filteredResults = posts.filter((post) =>
       ((post.body).toLowerCase()).includes(search.toLowerCase())
@@ -68,8 +66,6 @@ function App() {
     setPosts([...posts, newPost])
     setPostTitle('')
     setPostBody('')
-
-
 
   }
 

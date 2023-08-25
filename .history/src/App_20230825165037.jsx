@@ -49,8 +49,6 @@ function App() {
   const [postBody, setPostBody] = useState('')
 
 
-
-
   useEffect(() => {
     const filteredResults = posts.filter((post) =>
       ((post.body).toLowerCase()).includes(search.toLowerCase())
@@ -69,8 +67,6 @@ function App() {
     setPostTitle('')
     setPostBody('')
 
-
-
   }
 
   const handleDelete = (id) => {
@@ -80,8 +76,8 @@ function App() {
   }
 
   const router = createBrowserRouter(createRoutesFromElements(
-    <Route path='/'
-      element={<Layout search={search} setSearch={setSearch} />} >
+    <Route path='/' element={<Layout />} search={search}
+      setSearch={setSearch} >
       <Route
         index
         element={<Home posts={searchResult} />}

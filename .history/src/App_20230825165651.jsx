@@ -4,7 +4,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  RouterProvider
+  RouterProvider,
+  useNavigation
 } from 'react-router-dom'
 
 import './App.css'
@@ -48,7 +49,7 @@ function App() {
   const [postTitle, setPostTitle] = useState('')
   const [postBody, setPostBody] = useState('')
 
-
+  const navigate = useNavigation()
 
 
   useEffect(() => {
@@ -68,7 +69,7 @@ function App() {
     setPosts([...posts, newPost])
     setPostTitle('')
     setPostBody('')
-
+    navigate('/')
 
 
   }
