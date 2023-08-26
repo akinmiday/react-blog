@@ -210,11 +210,10 @@ body {
   min-width: 48px;
   border-radius: 0.25rem;
   padding: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
-  border: none;
 }
 
 .deleteButton{

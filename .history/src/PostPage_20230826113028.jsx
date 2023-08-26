@@ -16,7 +16,7 @@ const PostPage = (props) => {
                         <Link to={`/edit/${post.id}`} >
                             <button className="editButton" >Edit Post</button>
                         </Link>
-                        <button className="deleteButton" onClick={() => handleDelete(post.id)} >
+                        <button onClick={() => handleDelete(post.id)} >
                             Delete Post
                         </button>
                     </>

@@ -80,8 +80,8 @@ function App() {
     try {
       const response = await api.put(`/posts/${id}`, updatedPost)
       setPosts(posts.map(post => post.id === id ? { ...response.data } : post))
-      setEditTitle("")
-      setEditBody("")
+      setEditTitle('')
+      setEditBody('')
     } catch (err) {
       console.log(err.message)
     }
@@ -120,7 +120,6 @@ function App() {
       <Route
         path='edit/:id'
         element={<EditPost
-          posts={posts}
           handleEdit={handleEdit}
           editTitle={editTitle}
           setEditTitle={setEditTitle}

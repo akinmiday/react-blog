@@ -15,7 +15,6 @@ import NewPost from './NewPost'
 import PostPage from './PostPage'
 import About from './About'
 import Missing from './Missing'
-import EditPost from './EditPost'
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -78,10 +77,7 @@ function App() {
     const datetime = format(new Date(), 'MMMM dd, yyyy pp')
     const updatedPost = { id, title: editTitle, datetime, body: editBody }
     try {
-      const response = await api.put(`/posts/${id}`, updatedPost)
-      setPosts(posts.map(post => post.id === id ? { ...response.data } : post))
-      setEditTitle("")
-      setEditBody("")
+
     } catch (err) {
       console.log(err.message)
     }
@@ -116,16 +112,6 @@ function App() {
           setPostTitle={setPostTitle}
           postBody={postBody}
           setPostBody={setPostBody} />}
-      />
-      <Route
-        path='edit/:id'
-        element={<EditPost
-          posts={posts}
-          handleEdit={handleEdit}
-          editTitle={editTitle}
-          setEditTitle={setEditTitle}
-          editBody={editBody}
-          setEditBody={setEditBody} />}
       />
       <Route
         path='post/:id'
