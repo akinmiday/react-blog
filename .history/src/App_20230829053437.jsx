@@ -90,11 +90,7 @@ function App() {
       element={<Layout search={search} setSearch={setSearch} />} >
       <Route
         index
-        element={<Home
-          posts={searchResult}
-          fetchError={fetchError}
-          isLoading={isLoading}
-        />}
+        element={<Home posts={searchResult} />}
 
       />
       <Route

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import useWindowSize from "./hooks/useWindowSize"
+import { width } from "./hooks/useWindowSize"
 import Footer from "./Footer"
 import Header from "./Header"
 import Nav from "./Nav"
@@ -10,7 +10,7 @@ const Layout = ({ search, setSearch }) => {
 
     return (
         <div className="App" >
-            <Header title='React JS Blog' width={width} />
+            <Header title='React JS Blog' />
             <Nav search={search} setSearch={setSearch} />
             <main className="Home" >
                 <Outlet />
